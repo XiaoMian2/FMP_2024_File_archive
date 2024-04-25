@@ -1,0 +1,81 @@
+ICTWEB517_Assessment_1
+
+1.What is programming control? (30-60 words)
+在一个程序执行的过程中，各条代码的执行顺序对程序的结果是有直接影响的。
+    基本三种流程控制结构分别是：顺序结构、条件分支结构以及循环结构。
+    
+
+2.What is the authentication and web security. 
+(50-100 words)
+身份验证决定了系统在授予访问文件和请求的任何内容之前验证某人身份的各种要素。
+    用户可以通过输入他们的用户名和密码的方式实现，这允许系统确认他们的身份。
+    web security通过在用户及其浏览器之间提供代理来阻止许多基于web的攻击。
+    越来越多的信息化设备与虚拟财产的安全遭到威胁，恶意软件和网络攻击很难识别。因此authentication 和web security对于守护网络安全至关重要。
+    
+
+3.What does HTTP stand for? What is HTTP used for? (30-60 words)
+HTTP是 Hyper Text Transfer Protocol的缩写。
+    HTTP是一种协议规范，这种规范记录在文档上，为真正通过HTTP进行通信的HTTP的实现程序。
+    HTTP通过TCP向服务器发起请求，然后服务器处理该请求并发回一条消息。
+    http是应用层协议，是为了实现某一类具体应用的协议，并由某一运行在用户空间的应用程序来实现其功能。
+    
+
+4.What is a stateless programming?(30-60 words)
+无状态中，事务处理必须在一个方法中结束。
+    无状态是指在不同方法调用间不保留任何状态。
+    无状态不会专门为特定的客户端保存状态。
+    无状态语句通常资源占用较少，可以被共享。
+    无状态编程中，函数执行所需的数据作为输入传递，而不是维护单独的状态。
+    
+
+5.Please briefly explain the principles of web analysis and design.
+(50-100 words)
+收集与目标相关的数据，包括网站流量、用户行为、转化率等其他有助于了解用户参与度的指标。
+    利用从网络分析中获得的数据和结论采取行动，改进网站。
+    当考虑元素在页面上的排列方式时，要注意视觉平衡。 平衡的设计会让人感觉有凝聚力和和谐。
+    使用响应式设计，使网站能够根据任何设备的屏幕大小进行调整。
+    将用户的选择保持在最低限度（希克定律）。太多的选择会让用户陷入瘫痪。
+    
+
+6.Please list the difference of features and functionalities between JavaScript and PHP
+(30-60 words)  
+PHP 是一种服务器端脚本语言，而JavaScript是一种客户端脚本语言。
+    php即“超文本预处理器”,使用广泛，主要适用于Web开发领域并可嵌入HTML中。JS是前端的多功能语言，主要用于使网页具有交互性和动态性。
+    javascript是所提交的数据是交给浏览器来处理的。php是把数据提交给服务器去处理。
+    
+
+7.What is JavaScript and how can it assist you as a web developer? 
+(50-100 words)
+JavaScript在1995年由Netscape公司的Brendan Eich，在网景导航者浏览器上首次设计实现而成。
+    JavaScript是一种具有函数优先的轻量级，解释型或即时编译型的编程语言。
+    JavaScript脚本语言同其他语言一样，有它自身的基本数据类型，表达式和算术运算符及程序的基本程序框架。
+    JS可以对浏览器事件做出响应。
+    JS可以控制cookies，包括创建和修改等。
+    JS可以嵌入动态文本于HTML页面。
+    
+
+8.What is hypertext mark-up language? How can it help you as a web developer? 
+(30-60 words)
+HTML是网络的通用语言，一种简单、通用的全置标记语言。
+    HTML采用超集方式，从而更加灵活方便。
+    超级文本标记语言的广泛应用带来了加强功能，增加标识符等要求，超级文本标记语言采取子类元素的方式，为系统扩展带来保证。
+    使用HTML，将所需要表达的信息按某种规则写成HTML文件，通过专用的浏览器来识别，即我们所见到的网页。
+    
+
+9.What are cascading style sheets? How can they help you as a web developer?
+(30-60 words)
+Cascading Style Sheets是一种用来表现HTML或XML等文件样式的计算机语言。
+    CSS支持几乎所有的字体字号样式，拥有对网页对象和模型样式编辑的能力。
+    CSS是控制HTML内标签显示不同布局样式。可以控制对应html标签颜色、字体大小、字体、宽度、高度、浮动等样式。
+    CSS 能够对网页中元素位置的排版进行像素级精确控制。
+    
+
+10.Provide an overview of the typical steps an organisation would require you to follow when developing a website. 
+(50-100 words)
+了解需求，明确网站开发的目的。
+    规划框架，整理好需求后，画出框架即原型图。
+    页面设计和页面布局，让访问者感到高效、方便和舒适。
+    网站开发，根据反馈信息进行调整后，再交客户审核，直至客户确认完成设计。
+    测试评估，完善网站。然后把网站部署到服务器上发布。
+    进行网站备案、网站备份、后期维护等。
+    

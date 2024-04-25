@@ -1,0 +1,48 @@
+ICTWEB517_Assessment_2
+
+Part 1: Identify the requirements for the project
+
+all users (external) to be able to view the basic information and search a product on the website
+user can browse through a range of pre-determined consumer products (books)
+allow users (external) to register a membership, and then log into the system when ever they need to
+only the admins (internal staff) should be permitted to view the tracking information of user (external) searches within the website
+view or search a product (book) after logged in
+
+
+Part 2: Design database tables
+
+1.	An accounts table to store the details of users who have registered in the website
+
+              userId             int(10)          primary key
+          user_email          varchar(28)            not null
+            password          varchar(21)            not null
+            is_admin          varchar(8)            not null
+
+2.	A products table to store the details of products that are available for review
+
+                  id             int(10)          primary key
+           bookTitle          varchar(51)            not null
+               price              double            not null
+          book_image          varchar(72)            not null
+
+3.    A tracking table to store the search details that the viewer entered into the search box.
+
+          trackingId                 int          primary key
+                data          varchar(50)            not null
+
+
+Part 3: Confirm with Client
+
+根据后面的邮件内容自行组织翻译, 将完成的文档当做附件发给任课老师邮箱
+截图发件界面，放在Part 3下面，邮箱安排如下：
+itbd12班发给：kevin_mitnick1988@163.com
+cciot班发给：liuqingfmp@163.com
+
+邮件标题：数据库设计确认
+邮件内容：
+Dear Project Manager, 
+    
+数据库设计好了，请确认
+    
+WangYiZhuo S1554654
+
