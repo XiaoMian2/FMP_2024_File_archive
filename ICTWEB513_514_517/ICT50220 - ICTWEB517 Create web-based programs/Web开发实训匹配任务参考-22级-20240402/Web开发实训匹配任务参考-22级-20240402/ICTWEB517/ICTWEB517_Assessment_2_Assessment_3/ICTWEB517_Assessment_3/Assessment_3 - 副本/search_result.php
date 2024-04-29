@@ -1,13 +1,18 @@
 <?php
 session_start();
 
-//Check whether the 5-minute inactivity time has timed out, log out and log in after the timeout, and reset the timer if it has not timed out.
+//检查5分无操作时间是否超时，超时注销登录，未超时重置计时器
 if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     return header('location: logout.php');
 }elseif (isset($_SESSION['user']) && isset($_COOKIE['active_time'])){
     setcookie('active_time', time(), time()+300);
 }
 
+//如果没有经过搜索直接访问结果页面，跳转回搜索页面
+if(!isset($_SESSION['search'])){
+    $_SESSION['message']['success'] = '请输入您需要查找的商品';
+    return header('location: search.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,15 +20,15 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* be placed first, and any other content *must* follow them! -->
-    <title> wangyizhuo S1554654 - Home </title>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title> wangyizhuo S1554654 - Search Result </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
 
-    <!-- HTML5 shim and Respond.js are for IE8 to support HTML5 elements and media queries -->
-    <!-- Warning: Respond.js does not work when accessing the page through the file:// protocol (that is, dragging the html page directly into the browser) -->
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -90,49 +95,23 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
 
 <div class="jumbotron">
     <div class="container">
-        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <img src="images/category_1.jpeg" alt="分类1说明">
-                    <div class="carousel-caption">
-                        书籍分类1简介
+        <div class="search-result">查询结果如下</div>
+        <div class="row">
+            <?php foreach($_SESSION['search']['books'] as $book): ?>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="thumbnail">
+                        <img src="<?php echo $book['image']; ?>" alt="<?php echo $book['book_title']; ?>" class="img-responsive">
+                        <div class="caption text-center">
+                            <h3><?php echo $book['book_title']; ?></h3>
+                            <p>$<?php echo $book['bookPrice']; ?></p>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="images/category_2.jpeg" alt="分类2说明">
-                    <div class="carousel-caption">
-                        书籍分类2简介
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="images/category_3.jpeg" alt="分类3说明">
-                    <div class="carousel-caption">
-                        书籍分类3简介
-                    </div>
-                </div>
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <?php endforeach; ?>
         </div>
     </div>
 </div>
-
 
 <div class="row">
     <ul class="list-inline text-center">
@@ -141,9 +120,9 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
 </div>
 
 
-<!-- jQuery (all JavaScript plug-ins of Bootstrap depend on jQuery, so they must be placed first) -->
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="js/jquery.min.js"></script>
-<!-- Load all JavaScript plugins for Bootstrap. You can also load just a single plugin if needed. -->
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="js/bootstrap.min.js"></script>
 
 </body>
