@@ -22,13 +22,13 @@ if(!isset($_COOKIE['active_time'])){
 }
 
 //连接数据库
-$conn = new mysqli('127.0.0.1', 'root', '', 'WangYiZhuo');
+$conn = new mysqli('127.0.0.1', 'root', '', 'wangyizhuo');
 // 设置字符集
 $conn->set_charset('UTF8');
 //准备 sql, 绑定用户参数
 
 //查询所有的用户搜索关键字数据，按照关键字分组并统计数据
-$sql = 'select data, count(data) as total from WangYiZhuo_tracking group by data order by total desc';
+$sql = 'select tracking_data, count(tracking_data) as total from wangyizhuo_tracking group by tracking_data order by total desc';
 $statement = $conn->prepare($sql);
 //发送请求 缓存结果或者结果集
 $statement->execute();
@@ -46,7 +46,7 @@ while ($keyword = $result->fetch_assoc()){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title> WangYiZhuo S1554654 - Hot </title>
+    <title> wangyizhuo S1554654 - Hot </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -99,7 +99,7 @@ while ($keyword = $result->fetch_assoc()){
                 <?php endif; ?>
             </ul>
             <?php if(isset($_SESSION['user'])): ?>
-                <form action="process_searching.php" method="post" class="navbar-form navbar-right">
+                <form action="process_searching.php" method="post" class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" class="form-control" name="keyword" placeholder="Book Title">
                     </div>
@@ -126,7 +126,7 @@ while ($keyword = $result->fetch_assoc()){
             <div id="keyword_list">
                 <?php if(isset($keywords)): ?>
                     <?php foreach ($keywords as $keyword): ?>
-                        <a class="keyword" href="search.php?kw=<?php echo $keyword['data']; ?>"><?php echo $keyword['data']; ?></a>
+                        <a class="keyword" href="search.php?kw=<?php echo $keyword['tracking_data']; ?>"><?php echo $keyword['tracking_data']; ?></a>
                     <?php endforeach; ?>
                 <?php else: ?>
                     <div class="alert-success">暂无热搜词条</div>
@@ -138,7 +138,7 @@ while ($keyword = $result->fetch_assoc()){
 
 <div class="row">
     <ul class="list-inline text-center">
-        <li>WangYiZhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
+        <li>wangyizhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
     </ul>
 </div>
 

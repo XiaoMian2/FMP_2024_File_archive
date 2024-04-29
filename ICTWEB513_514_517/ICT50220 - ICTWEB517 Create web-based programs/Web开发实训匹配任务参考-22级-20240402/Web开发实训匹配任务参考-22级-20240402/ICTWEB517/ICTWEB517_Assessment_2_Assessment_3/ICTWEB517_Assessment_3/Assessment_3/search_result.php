@@ -21,7 +21,7 @@ if(!isset($_SESSION['search'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title> WangYiZhuo S1554654 - Search Result </title>
+    <title> wangyizhuo S1554654 - Search Result </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -74,7 +74,7 @@ if(!isset($_SESSION['search'])){
                 <?php endif; ?>
             </ul>
             <?php if(isset($_SESSION['user'])): ?>
-                <form action="process_searching.php" method="post" class="navbar-form navbar-right">
+                <form action="process_searching.php" method="post" class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" class="form-control" name="keyword" placeholder="Book Title">
                     </div>
@@ -101,10 +101,10 @@ if(!isset($_SESSION['search'])){
             <?php foreach($_SESSION['search']['books'] as $book): ?>
                 <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
                     <div class="thumbnail">
-                        <img src="<?php echo $book['book_image']; ?>" alt="<?php echo $book['bookTitle']; ?>" class="img-responsive">
+                        <img src="<?php echo $book['image']; ?>" alt="<?php echo $book['book_title']; ?>" class="img-responsive">
                         <div class="caption text-center">
-                            <h3><?php echo $book['bookTitle']; ?></h3>
-                            <p>$<?php echo $book['price']; ?></p>
+                            <h3><?php echo $book['book_title']; ?></h3>
+                            <p>$<?php echo $book['bookPrice']; ?></p>
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ if(!isset($_SESSION['search'])){
 
 <div class="row">
     <ul class="list-inline text-center">
-        <li>WangYiZhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
+        <li>wangyizhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
     </ul>
 </div>
 

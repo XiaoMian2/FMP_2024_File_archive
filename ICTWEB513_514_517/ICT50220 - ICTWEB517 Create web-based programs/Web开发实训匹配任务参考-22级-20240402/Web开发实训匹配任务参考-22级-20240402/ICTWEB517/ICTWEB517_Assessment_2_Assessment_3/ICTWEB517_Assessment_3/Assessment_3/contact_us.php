@@ -16,7 +16,7 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title> WangYiZhuo S1554654 - Contact Us </title>
+    <title> wangyizhuo S1554654 - Contact Us </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -69,7 +69,7 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
                 <?php endif; ?>
             </ul>
             <?php if(isset($_SESSION['user'])): ?>
-                <form action="process_searching.php" method="post" class="navbar-form navbar-right">
+                <form action="process_searching.php" method="post" class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" class="form-control" name="keyword" placeholder="Book Title">
                     </div>
@@ -87,16 +87,16 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     <div class="container">
         <div class="row">
             <h1 class="text-center">Contact Us at</h1>
-            <div class="hidden-12 col-sm-6 col-md-6 col-lg-6">
-                <ul id="contact_list">
-                   <li>Telephone: 1300 000 000</li>
-                   <li>Email: <a href="contact_us.html">mplibrary@mplibrary.com</a></li>
-                </ul>
-            </div>
             <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                 <div class="thumbnail">
                     <iframe src="https://map.baidu.com/search/%E5%A2%A8%E5%B0%94%E6%9C%AC%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2/@16141242.925,-4516712.84,19z?querytype=s&da_src=shareurl&wd=%E5%A2%A8%E5%B0%94%E6%9C%AC%E7%90%86%E5%B7%A5%E5%AD%A6%E9%99%A2&c=300&src=0&wd2=%E5%A2%A8%E5%B0%94%E6%9C%AC&pn=0&sug=1&l=13&b=(13257483,2983833;13306603,3007961)&from=webmap&biz_forward=%7B%22scaler%22:2,%22styles%22:%22pl%22%7D&sug_forward=c07b6c89c12e63bf8405bf33&device_ratio=2"></iframe>
                 </div>
+            </div>
+            <div class="hidden-12 col-sm-6 col-md-6 col-lg-6">
+                <ul id="contact_list">
+                    <li>Telephone: 1300 000 000</li>
+                    <li>Email: <a href="contact_us.html">mplibrary@mplibrary.com</a></li>
+                </ul>
             </div>
         </div>
     </div>
@@ -104,7 +104,7 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     
 <div class="row">
     <ul class="list-inline text-center">
-        <li>WangYiZhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
+        <li>wangyizhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
     </ul>
 </div>
 

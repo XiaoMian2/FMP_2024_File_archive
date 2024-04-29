@@ -1,38 +1,38 @@
-drop database if exists `WangYiZhuo`;
-create database `WangYiZhuo` charset=utf8;
+drop database if exists `wangyizhuo`;
+create database `wangyizhuo` charset=utf8;
 
-use `WangYiZhuo`;
+use `wangyizhuo`;
 
-drop table if exists `WangYiZhuo_accounts`;
-create table `WangYiZhuo_accounts`
+drop table if exists `wangyizhuo_accounts`;
+create table `wangyizhuo_accounts`
 (
   `userId` int(10) unsigned primary key auto_increment,
-  `user_email` varchar(28) not null,
-  `password` varchar(21) not null,
+  `user_email` varchar(24) not null,
+  `userPassword` varchar(25) not null,
   `is_admin` varchar(8) not null
 );
 
-drop table if exists `WangYiZhuo_products`;
-create table `WangYiZhuo_products`
+drop table if exists `wangyizhuo_products`;
+create table `wangyizhuo_products`
 (
-  `id` int(10) unsigned primary key auto_increment,
-  `bookTitle` varchar(51) not null,
-  `price` double not null,
-  `book_image` varchar(72) not null
+  `id` int unsigned primary key auto_increment,
+  `book_title` varchar(51) not null,
+  `bookPrice` double not null,
+  `image` varchar(65) not null
 );
 
-drop table if exists `WangYiZhuo_tracking`;
-create table `WangYiZhuo_tracking`
+drop table if exists `wangyizhuo_tracking`;
+create table `wangyizhuo_tracking`
 (
-  `trackingId` int unsigned primary key auto_increment,
-  `data` varchar(50) not null
+  `trackingId` int(10) unsigned primary key auto_increment,
+  `tracking_data` varchar(85) not null
 );
 
 
-insert into `WangYiZhuo_accounts` values(null, 'WangYiZhuo@qq.com', 'pass', 'no'),
+insert into `wangyizhuo_accounts` values(null, 'wangyizhuo@qq.com', 'pass', 'no'),
                         (null, 'library@mp.com', 'admin123', 'yes');
 
-insert into `WangYiZhuo_products` values(null, '书籍1', 10.8, 'images/book_1.jpeg'),
+insert into `wangyizhuo_products` values(null, '书籍1', 10.8, 'images/book_1.jpeg'),
 						(null, '书籍2', 21, 'images/book_2.jpeg'),
 						(null, '书籍3', 36, 'images/book_3.jpeg'),
 						(null, '书籍4', 48, 'images/book_4.jpeg'),

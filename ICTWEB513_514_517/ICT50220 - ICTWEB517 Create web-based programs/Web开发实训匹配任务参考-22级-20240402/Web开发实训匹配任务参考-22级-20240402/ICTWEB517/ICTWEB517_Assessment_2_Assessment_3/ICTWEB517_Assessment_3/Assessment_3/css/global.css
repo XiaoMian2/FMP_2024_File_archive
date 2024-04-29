@@ -1,8 +1,23 @@
 
 /*
-    WangYiZhuo S1554654
+    wangyizhuo S1554654
  */
 
+/*
+    巨幕中书籍盒子
+ */
+div.jumbotron div.thumbnail > img{
+    width: 100%;
+    height: 300px;
+}
+
+div.jumbotron div.caption > p,h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}    
+    
+    
 /*
     热搜
 */
@@ -38,21 +53,6 @@
     background-color: lightgray;
 }    
     
-/*
-    巨幕中书籍盒子
- */
-div.jumbotron div.thumbnail > img{
-    width: 100%;
-    height: 300px;
-}
-
-div.jumbotron div.caption > p,h3{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}    
-    
-    
 /* 搜索 */
 #search{
     width: 80%;
@@ -86,24 +86,6 @@ div.jumbotron div.caption > p,h3{
 }    
     
 /*
-    商标
- */
-a.navbar-brand > img{
-    height: 100%;
-}
-    
-/* 关于我们视频 */
-div.jumbotron video{
-    width: 100%;
-    height: 250px;
-}
-    
-/* 巨幕颜色 */
-div.jumbotron{
-    background-color: lightcoral ;
-}
-
-/*
     巨幕名言引用
  */
 div.jumbotron blockquote > p{
@@ -124,6 +106,20 @@ div.search-result{
     text-align: center;
 }    
     
+/*
+    巨幕轮播
+ */
+div.carousel-inner > div.item > img{
+    height: 500px;
+    width: 100%;
+}
+
+div.carousel-inner > div.item > div.carousel-caption{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+    
 /* 联系我们列表 */
 #contact_list > li{
     font-size: 2em;
@@ -141,20 +137,6 @@ div.thumbnail > iframe{
 }   
     
 /*
-    巨幕轮播
- */
-div.carousel-inner > div.item > img{
-    height: 500px;
-    width: 100%;
-}
-
-div.carousel-inner > div.item > div.carousel-caption{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-    
-/*
     清除浮动
 */
 .clear-fix{
@@ -170,3 +152,20 @@ div.carousel-inner > div.item > div.carousel-caption{
     overflow:hidden;
 }    
     
+/* 关于我们视频 */
+div.jumbotron video{
+    width: 100%;
+    height: 250px;
+}
+    
+/*
+    商标
+ */
+a.navbar-brand > img{
+    height: 100%;
+}
+    
+/* 巨幕颜色 */
+div.jumbotron{
+    background-color: lightgreen ;
+}

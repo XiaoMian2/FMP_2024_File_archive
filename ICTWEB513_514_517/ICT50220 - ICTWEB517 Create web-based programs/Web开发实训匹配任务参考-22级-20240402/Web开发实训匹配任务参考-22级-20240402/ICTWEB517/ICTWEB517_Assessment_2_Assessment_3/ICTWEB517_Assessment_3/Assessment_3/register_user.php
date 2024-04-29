@@ -12,13 +12,13 @@ if($confirm != $password){
 }
 
 //连接数据库
-$conn = new mysqli('127.0.0.1', 'root', '', 'WangYiZhuo');
+$conn = new mysqli('127.0.0.1', 'root', '', 'wangyizhuo');
 // 设置字符集
 $conn->set_charset('UTF8');
 //准备 sql, 绑定用户参数
 
 //检查帐号是否已经存在
-$sql = 'select * from `WangYiZhuo_accounts` where user_email = ?';
+$sql = 'select * from `wangyizhuo_accounts` where user_email = ?';
 $statement = $conn->prepare($sql);
 //发送请求 缓存结果或者结果集
 $statement->bind_param('s', $email);
@@ -31,7 +31,7 @@ if($result->num_rows > 0){
 }
 
 //插入新的帐号信息
-$sql = 'insert into `WangYiZhuo_accounts` values (null, ?, ?, ?)';
+$sql = 'insert into `wangyizhuo_accounts` values (null, ?, ?, ?)';
 $statement = $conn->prepare($sql);
 //发送请求 缓存结果或者结果集
 $statement->bind_param('sss', $email, $password, $admin);

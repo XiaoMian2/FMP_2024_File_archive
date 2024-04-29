@@ -16,7 +16,7 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title> WangYiZhuo S1554654 - About Us </title>
+    <title> wangyizhuo S1554654 - About Us </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -69,7 +69,7 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
                 <?php endif; ?>
             </ul>
             <?php if(isset($_SESSION['user'])): ?>
-                <form action="process_searching.php" method="post" class="navbar-form navbar-right">
+                <form action="process_searching.php" method="post" class="navbar-form navbar-left">
                     <div class="form-group">
                         <input type="text" class="form-control" name="keyword" placeholder="Book Title">
                     </div>
@@ -86,26 +86,26 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
 <div class="jumbotron">
     <div class="container">
         <div class="row">
-            <div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
-                <div class="thumbnail">
-                    <video src="videos/promotion.mp4" controls></video>
-                </div>
-            </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-                <blockquote class="blockquote-reverse">
+                <blockquote >
                     <p>"Melbourne Public Library is an institution dating back to 1929. We have a range
                         of books, CDs, DVDs, magazines as well as a large range of downloadable content."
                     </p>
                     <footer>Melbourne Public Library</footer>
                 </blockquote>
             </div>
+            <div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
+                <div class="thumbnail">
+                    <video src="videos/promotion.mp4" controls></video>
+                </div>
+            </div>
         </div>
     </div>
-</div>     
-     
+</div>
+    
 <div class="row">
     <ul class="list-inline text-center">
-        <li>WangYiZhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
+        <li>wangyizhuo S1554654&nbsp;&nbsp;@</li><li><a href="http://www.fmp.edu.cn/" target="_blank">FUZHOU MELBOURNE POLYTECHNIC</a></li>
     </ul>
 </div>
 

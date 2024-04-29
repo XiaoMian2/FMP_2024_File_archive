@@ -5,19 +5,19 @@ session_start();
 $keyword = $_POST['keyword'];
 
 //连接数据库
-$conn = new mysqli('127.0.0.1', 'root', '', 'WangYiZhuo');
+$conn = new mysqli('127.0.0.1', 'root', '', 'wangyizhuo');
 // 设置字符集
 $conn->set_charset('UTF8');
 //准备 sql, 绑定用户参数
 
 //往查询记录存储表中添加查询关键字记录
-$sql = 'insert into `WangYiZhuo_tracking` values(null, ?)';
+$sql = 'insert into `wangyizhuo_tracking` values(null, ?)';
 $statement = $conn->prepare($sql);
 $statement->bind_param('s', $keyword);
 $statement->execute();
 
 //模糊查询，检查是否有查询关键字相关数据
-$sql = 'select * from `WangYiZhuo_products` where bookTitle like ?';
+$sql = 'select * from `wangyizhuo_products` where book_title like ?';
 $statement = $conn->prepare($sql);
 //发送请求 缓存结果或者结果集
 $keyword_param = '%'.$keyword.'%';
