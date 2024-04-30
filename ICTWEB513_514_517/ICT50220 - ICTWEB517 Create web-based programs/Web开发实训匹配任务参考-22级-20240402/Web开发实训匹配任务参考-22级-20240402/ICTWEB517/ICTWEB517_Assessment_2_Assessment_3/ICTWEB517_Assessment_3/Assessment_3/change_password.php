@@ -3,7 +3,7 @@ session_start();
 
 //Check whether you are logged in. If not, go to the login page to log in.
 if(!isset($_SESSION['user'])){
-    $_SESSION['message']['error'] = '您还未登录, 请先登录';
+    $_SESSION['message']['error'] = 'you are not logged in, if you signed in';
     return header('location: login.php');
 }
 
@@ -92,7 +92,7 @@ if(!isset($_COOKIE['active_time'])){
         <div class="row">
             <div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
                 <div class="thumbnail">
-                    <img src="images/reset_password.jpeg" alt="重置密码">
+                    <img src="images/reset_password.jpeg" alt="reset your password">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">

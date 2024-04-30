@@ -101,21 +101,21 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="images/category_1.jpeg" alt="分类1说明">
+                    <img src="images/category_1.jpeg" alt="classification1description">
                     <div class="carousel-caption">
-                        书籍分类1简介
+                        booksclassification1profile
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/category_2.jpeg" alt="分类2说明">
+                    <img src="images/category_2.jpeg" alt="classification2description">
                     <div class="carousel-caption">
-                        书籍分类2简介
+                        booksclassification2profile
                     </div>
                 </div>
                 <div class="item">
-                    <img src="images/category_3.jpeg" alt="分类3说明">
+                    <img src="images/category_3.jpeg" alt="classification3description">
                     <div class="carousel-caption">
-                        书籍分类3简介
+                        booksclassification3profile
                     </div>
                 </div>
             </div>

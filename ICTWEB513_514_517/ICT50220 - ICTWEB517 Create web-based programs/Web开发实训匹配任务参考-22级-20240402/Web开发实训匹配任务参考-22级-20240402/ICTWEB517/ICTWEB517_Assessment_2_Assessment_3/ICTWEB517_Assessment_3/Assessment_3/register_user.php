@@ -7,40 +7,40 @@ $confirm = $_POST['confirm'];
 $admin = "no";
 
 if($confirm != $password){
-    $_SESSION['message']['error'] = '两次密码不一致';
+    $_SESSION['message']['error'] = 'The passwords are inconsistent twice';
     return header('location: membership.php');
 }
 
-//连接数据库
+//connect to the database
 $conn = new mysqli('127.0.0.1', 'root', '', 'wangyizhuo');
-// 设置字符集
+// Set character set
 $conn->set_charset('UTF8');
-//准备 sql, 绑定用户参数
+//ready sql, Binding user parameters
 
-//检查帐号是否已经存在
+//Check whether the account already exists
 $sql = 'select * from `wangyizhuo_accounts` where user_email = ?';
 $statement = $conn->prepare($sql);
-//发送请求 缓存结果或者结果集
+//send a request Cache results or result sets
 $statement->bind_param('s', $email);
 $statement->execute();
 $result = $statement->get_result();
 
 if($result->num_rows > 0){
-    $_SESSION['message']['error'] = '用户名已存在';
+    $_SESSION['message']['error'] = 'user name already exists';
     return header('location: membership.php');
 }
 
-//插入新的帐号信息
+//Insert new account information
 $sql = 'insert into `wangyizhuo_accounts` values (null, ?, ?, ?)';
 $statement = $conn->prepare($sql);
-//发送请求 缓存结果或者结果集
+//send a request Cache results or result sets
 $statement->bind_param('sss', $email, $password, $admin);
 $result = $statement->execute();
 
 if($result){
-    $_SESSION['message']['success'] = '注册成功，请登录';
+    $_SESSION['message']['success'] = 'Registration is successful，please log in';
     return header('location: login.php');
 }else{
-    $_SESSION['message']['error'] = '注册失败，请再次尝试';
+    $_SESSION['message']['error'] = 'Registration failure，please try again';
     return header('location: membership.php');
 }

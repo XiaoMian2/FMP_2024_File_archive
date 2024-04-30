@@ -4,37 +4,37 @@ session_start();
 
 $keyword = $_POST['keyword'];
 
-//连接数据库
+//connect to the database
 $conn = new mysqli('127.0.0.1', 'root', '', 'wangyizhuo');
-// 设置字符集
+// Set character set
 $conn->set_charset('UTF8');
-//准备 sql, 绑定用户参数
+//ready sql, Binding user parameters
 
-//往查询记录存储表中添加查询关键字记录
+//Add query keyword records to the query record storage table
 $sql = 'insert into `wangyizhuo_tracking` values(null, ?)';
 $statement = $conn->prepare($sql);
 $statement->bind_param('s', $keyword);
 $statement->execute();
 
-//模糊查询，检查是否有查询关键字相关数据
+//fuzzy query，Check whether there is data related to query keywords
 $sql = 'select * from `wangyizhuo_products` where book_title like ?';
 $statement = $conn->prepare($sql);
-//发送请求 缓存结果或者结果集
+//send a request Cache results or result sets
 $keyword_param = '%'.$keyword.'%';
 $statement->bind_param('s', $keyword_param);
 $statement->execute();
 $result = $statement->get_result();
 
-//重置 session中的查询数据
+//reset sessionQuery data in
 unset($_SESSION['search']);
 
-//判断是否有数据
+//Determine whether there is data
 if ($result->num_rows == 0) {
-    //无数据返回查询页面
-    $_SESSION['message']['success'] = '未找到任何相关书籍记录';
+    //No data return to the query page
+    $_SESSION['message']['success'] = 'No relevant book records were found';
     return header('location: search.php');
 } else {
-    //有数据，将数据存入session跳转至结果页面
+    //there are data，store data insessionSkip to results page
     while ($book = $result->fetch_assoc()){
         $_SESSION['search']['books'][] = $book;
     }

@@ -4,13 +4,13 @@ session_start();
 
 //Check whether you are logged in. If not, go to the login page to log in.
 if(!isset($_SESSION['user'])){
-    $_SESSION['message']['error'] = '您还未登录, 请先登录';
+    $_SESSION['message']['error'] = 'you are not logged in, if you signed in';
     return header('location: login.php');
 }
 
 //Check whether you are logged in as admin. If not, go to the main page and prompt that you have no permission to view it.
 if(isset($_SESSION['user']) && $_SESSION['user']['is_admin'] != 'yes'){
-    $_SESSION['message']['success'] = '您无权访问该服务';
+    $_SESSION['message']['success'] = 'You do not have access to this service';
     return header('location: index.php');
 }
 
@@ -23,7 +23,7 @@ if(!isset($_COOKIE['active_time'])){
 
 //Connect to the database
 $conn = new mysqli('127.0.0.1', 'root', '', 'wangyizhuo');
-// 设Set character set
+// establishedSet character set
 $conn->set_charset('UTF8');
 //Prepare sql, bind user parameters
 
@@ -121,7 +121,7 @@ while ($keyword = $result->fetch_assoc()){
 <div class="jumbotron">
     <div class="container">
         <div id="keywords">
-            <h2>热门查询</h2>
+            <h2>popular queries</h2>
 
             <div id="keyword_list">
                 <?php if(isset($keywords)): ?>
@@ -129,7 +129,7 @@ while ($keyword = $result->fetch_assoc()){
                         <a class="keyword" href="search.php?kw=<?php echo $keyword['tracking_data']; ?>"><?php echo $keyword['tracking_data']; ?></a>
                     <?php endforeach; ?>
                 <?php else: ?>
-                    <div class="alert-success">暂无热搜词条</div>
+                    <div class="alert-success">No hot search entries</div>
                 <?php endif; ?>
             </div>
         </div>
@@ -143,9 +143,9 @@ while ($keyword = $result->fetch_assoc()){
 </div>
 
 
-<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<!-- jQuery (Bootstrap all JavaScript Plug-ins are all dependent jQuery，So it has to be put in front) -->
 <script src="js/jquery.min.js"></script>
-<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- loaded Bootstrap all JavaScript plug-in。You can also justloadedsingleplug-in。 -->
 <script src="js/bootstrap.min.js"></script>
 
 </body>

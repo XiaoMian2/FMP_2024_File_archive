@@ -1,9 +1,9 @@
 <?php
 session_start();
 
-//如果已经登录，则不允许继续访问登录
+//If you are already logged in，Continued access to the login is not allowed
 if(isset($_SESSION['user'])){
-    $_SESSION['message']['success'] = '欢迎回来, '.$_SESSION['user']['user_email'];
+    $_SESSION['message']['success'] = 'welcome back, '.$_SESSION['user']['user_email'];
     return header('location: index.php');
 }
 
@@ -15,15 +15,15 @@ if(isset($_SESSION['user'])){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- above3ametalabel*must*at the forefront，Any other content*must*followed！ -->
     <title> wangyizhuo S1554654 - Membership </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
 
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!-- HTML5 shim and Respond.js is to let IE8 support HTML5 elementsandmedia queries（media queries）function -->
+    <!-- warning：by file:// agreement（is to directly html Drag and drop the page into the browser）when you accessed the page Respond.js not work -->
     <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -87,7 +87,7 @@ if(isset($_SESSION['user'])){
         <div class="row">
             <div class="hidden-xs col-sm-4 col-md-4 col-lg-4">
                 <div class="thumbnail">
-                    <img src="images/free_membership.jpeg" alt="免费会员">
+                    <img src="images/free_membership.jpeg" alt="free membership">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -135,9 +135,9 @@ if(isset($_SESSION['user'])){
 </div>
 
 
-<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<!-- jQuery (Bootstrap all JavaScript Plug-ins are all dependent jQuery，somustPut it in front) -->
 <script src="js/jquery.min.js"></script>
-<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- loaded Bootstrap all JavaScript plug-in。You can also justloadedsingleaplug-in。 -->
 <script src="js/bootstrap.min.js"></script>
 
 <script>

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-//检查5分无操作时间是否超时，超时注销登录，未超时重置计时器
+//check5Whether the operation time has expired，Timeout out of login，Reset timer without timeout
 if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     return header('location: logout.php');
 }elseif (isset($_SESSION['user']) && isset($_COOKIE['active_time'])){
@@ -15,15 +15,15 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- above3ametalabel*must*at the forefront，Any other content*must*followed！ -->
     <title> wangyizhuo S1554654 - Search </title>
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/global.css">
 
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!-- HTML5 shim and Respond.js is to let IE8 support HTML5 elementsandmediacheckenquiry（media queries）function -->
+    <!-- warning：by file:// agreement（is to directly html Drag and drop the page into the browser）when you accessed the page Respond.js not work -->
     <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
@@ -91,8 +91,8 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
 <div class="jumbotron">
     <div class="container">
         <form id="search" action="process_searching.php" method="post">
-            <h2>产品查询</h2>
-            <input type="search" name="keyword" placeholder="请输入关键字" value="<?php echo isset($_GET['kw'])?$_GET['kw']:''; ?>" required><input type="submit" value="查">
+            <h2>product inquiry</h2>
+            <input type="search" name="keyword" placeholder="please enter a keyword" value="<?php echo isset($_GET['kw'])?$_GET['kw']:''; ?>" required><input type="submit" value="check">
             <?php if(isset($_SESSION['message']['success'])): ?>
                 <div class="alert-success">
                     <?php echo $_SESSION['message']['success']; unset($_SESSION['message']['success']); ?>
@@ -109,9 +109,9 @@ if(isset($_SESSION['user']) && !isset($_COOKIE['active_time'])){
 </div>
 
 
-<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<!-- jQuery (Bootstrap all JavaScript Plug-ins are all dependent jQuery，somustPut it in front) -->
 <script src="js/jquery.min.js"></script>
-<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<!-- loaded Bootstrap all JavaScript plug-in。You can also justloadedsingleaplug-in。 -->
 <script src="js/bootstrap.min.js"></script>
 
 </body>

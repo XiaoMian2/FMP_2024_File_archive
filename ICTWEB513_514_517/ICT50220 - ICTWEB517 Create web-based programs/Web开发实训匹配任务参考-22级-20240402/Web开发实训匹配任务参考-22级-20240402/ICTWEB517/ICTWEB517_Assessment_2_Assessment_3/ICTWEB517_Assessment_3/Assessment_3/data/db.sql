@@ -32,16 +32,16 @@ create table `wangyizhuo_tracking`
 insert into `wangyizhuo_accounts` values(null, 'wangyizhuo@qq.com', 'pass', 'no'),
                         (null, 'library@mp.com', 'admin123', 'yes');
 
-insert into `wangyizhuo_products` values(null, '书籍1', 10.8, 'images/book_1.jpeg'),
-						(null, '书籍2', 21, 'images/book_2.jpeg'),
-						(null, '书籍3', 36, 'images/book_3.jpeg'),
-						(null, '书籍4', 48, 'images/book_4.jpeg'),
-						(null, '书籍5', 16.8, 'images/book_5.jpeg'),
-						(null, '书籍6', 17.9, 'images/book_6.jpeg'),
-						(null, '书籍7', 39.8, 'images/book_7.jpeg'),
-						(null, '书籍8', 19.8, 'images/book_8.jpeg'),
-						(null, '书籍9', 29.8, 'images/book_9.jpeg'),
-						(null, '书籍10', 59.8, 'images/book_10.jpeg'),
-						(null, '书籍11', 9.8, 'images/book_11.jpeg'),
-						(null, '书籍12', 23.6, 'images/book_12.jpeg');
+insert into `wangyizhuo_products` values(null, 'A Tale of Two Cities', 34.56, 'images/book_1.jpeg'),
+						(null, 'The Little Prince', 78.21, 'images/book_2.jpeg'),
+						(null, 'The Alchemist', 45.89, 'images/book_3.jpeg'),
+						(null, 'Harry Potter and the Philosophers Stone', 12.34, 'images/book_4.jpeg'),
+						(null, 'And Then There Were None', 56.78, 'images/book_5.jpeg'),
+						(null, 'Dream of the Red Chamber', 23.45, 'images/book_6.jpeg'),
+						(null, 'The Hobbit', 67.89, 'images/book_7.jpeg'),
+						(null, 'She: A History of Adventure', 89.12, 'images/book_8.jpeg'),
+						(null, 'The Da Vinci Code ', 43.21, 'images/book_9.jpeg'),
+						(null, 'Harry Potter and the Chamber of Secrets', 98.76, 'images/book_10.jpeg'),
+						(null, 'Harry Potter and the Prisoner of Azkaban', 54.32, 'images/book_11.jpeg'),
+						(null, 'Harry Potter and the Goblet of Fire', 21.98, 'images/book_12.jpeg');
 
