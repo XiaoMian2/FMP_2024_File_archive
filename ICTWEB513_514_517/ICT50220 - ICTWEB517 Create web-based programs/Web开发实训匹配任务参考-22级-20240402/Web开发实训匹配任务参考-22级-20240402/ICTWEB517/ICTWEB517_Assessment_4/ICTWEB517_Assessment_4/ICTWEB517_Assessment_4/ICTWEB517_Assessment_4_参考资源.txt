@@ -1,0 +1,81 @@
+ICTWEB517_Assessment_4
+
+1.Explain the feedback you received from your Assessor and describe 
+the changes you made to the website as a result.
+经过测试，网站基本运行良好，没有明显的网络问题。网站基本符合客户需求。
+一些页面在移动端的布局可以再充裕一些。
+    
+
+2.Why was it important for you to document each stage of your website
+ design and development? 
+有助于传达项目的目标、目的和要求。
+    有助于确保参与项目的每个人都了解这个项目。
+    有助于跟踪所做的事情，了解需要做什么，做了哪些改变。
+    可作为将来使用的参考资料。
+    
+
+3.Describe the code debug technique(s) you used and explain why you selected this method.
+Chrome 开发者工具Devtools是一个被集成在浏览器中的web应用程序，
+    提供了强大的调试功能和查看性能指标的能力。
+    为我们提供了通过界面访问或者编辑 DOM 和 CSSOM 的能力。
+    
+
+4.List three advantages and three disadvantages of HTTP.
+优点:
+无状态的，每一个请求都是相互独立的，默认不需要保存上下文的信息。
+    请求应答，有来有回。
+    HTTP可以轻松实现集群化，扩展性能。
+    缺点:
+HTTP是不安全的，无法验证通信双方的身份，也不能判断报文是否被窜改。
+    为了传输一个网页，一个HTTP需要创建多个连接。这会导致连接中的管理开销。
+    即使 HTTP 接收到它需要的所有数据，客户端也不会采取措施关闭连接。因此，在此期间，服务器将不存在。
+    
+
+5.What authentication and web security did you use? Explain why you selected these methods.
+用户可以通过输入他们的用户名和密码的方式实现，这允许系统确认他们的身份。
+    网站认证过程的工作原理是将用户的凭证（用户名和密码）与文件中的凭证进行比较。
+    这样可以确认用户的身份，保障用户的数据安全。
+    用户在表单中输入信息时，需要确保用户没有非法或影响网站安全的输入。
+    
+
+6.Why was session management so important for the auto logout function? 
+How is this different to a stateless web page?
+session可以检查未操作的时间，长时间未操作就会自动登出，可以防止用户信息泄漏。
+    无状态网页简单讲，就是不能识别用户，无法保存用户的各种信息。
+    无状态页面上，每次都要在交互场景请求中带上上一次的请求信息，如账号、密码。
+    
+
+7.What HTTP protocol did you use for the server-side application.
+Laragon中，打开浏览器访问默认站点http://localhost 就能够访问网页文件。
+    提供构建现代Web应用程序所需的一切软件。
+    GET和POST
+GET和POST是HTTP请求服务器的两种基本方法.。
+    GET对值的长度有限制，一般为255个字符。POST对值的长度没有限制，因为它们是通过HTTP的主体提交的。
+    当点击网页上的链接或者通过在浏览器的地址栏输入网址来浏览网页的，使用的都是GET方式。
+    
+
+8.What data storage requirements did you need to consider?
+采用了mysql数据库，它是关系型数据库，是开放源码，很多网站的开发都选择 MySQL 作为网站数据库。
+    数据库中需要保存用户的用户名、密码、国家等数据。
+    网站要保护数据安全，遵守数据保护法。
+    对于重要数据避免明文传输和存储，可以进行加密。
+    
+
+9.How did you test your website? Explain why this step is so important.
+可用性检测：对用户界面视觉效果、功能按键、使用性等是否合理方便等测试。
+    功能测试，测试网站各个功能能否顺利实现。
+    代码合法性测试：包括程序代码合法性检查与显示代码合法性检查。
+    确保网站在不同设备中能以最佳效果展示现来。
+    确保网站运行、链接畅通。
+    让网站达到最佳状态上线。
+    
+
+10.How did you apply legislative and organisational standards and 
+procedures applicable to web applications.
+版权问题，不要使用违反版权管理的图片或转载未经许可的文章。
+    网站不能发布违法的内容，和需要承担法律风险的内容。
+    网站在收集任何个人数据之前获得用户同意，保护用户信息。
+    除了用户注册信息和浏览记录外，其他数据都不允许非法存储。
+    代码结构必须清晰。
+    用户的浏览查询记录可以保存在服务器的数据库中。
+    
